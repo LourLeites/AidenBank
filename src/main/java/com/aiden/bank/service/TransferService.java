@@ -23,8 +23,9 @@ public class TransferService {
 
     @Transactional
     public Transfer create(TransferRequest request) {
-        Account originAccount = accountService.obtain(request.getFromAccountId());
-        Account destinationAccount = accountService.obtain(request.getToAccountId());
+        Account originAccount = accountService.getById(request.getFromAccountId());
+        Account destinationAccount = accountService.getById(
+                request.getToAccountId());
         if (originAccount.getBalance() < request.getAmount()) {
             throw new ApiException("INSUFFICIENT_BALANCE", "Saldo insuficiente en la cuenta origen", HttpStatus.BAD_REQUEST);
         }

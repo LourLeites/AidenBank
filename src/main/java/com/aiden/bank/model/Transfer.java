@@ -1,5 +1,6 @@
 package com.aiden.bank.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -30,9 +31,12 @@ public class Transfer {
 
     @ManyToOne
     @JoinColumn(name = "source_account_id")
+    @JsonIgnoreProperties({"outgoingTransfers", "incomingTransfers"})
     private Account sourceAccount;
 
     @ManyToOne
     @JoinColumn(name = "destination_account_id")
+    @JsonIgnoreProperties({"outgoingTransfers", "incomingTransfers"})
     private Account destinationAccount;
+
 }

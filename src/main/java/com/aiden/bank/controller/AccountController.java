@@ -8,7 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("v1/api/accounts")
+@RequestMapping("api/v1/accounts")
 public class AccountController {
 
     @Autowired
@@ -19,15 +19,14 @@ public class AccountController {
     }
 
     @PostMapping
-    public ResponseEntity<Account> crear(
+    public ResponseEntity<Account> create(
             @RequestBody @Valid Account account) {
-        return ResponseEntity.status(HttpStatus.CREATED)
-                .body(accountService.create(account));
+        return ResponseEntity.status(HttpStatus.CREATED).body(accountService.create(account));
     }
     @GetMapping("/{id}")
     public ResponseEntity<Account> obtain(
             @PathVariable(name="id") Long id){
-       Account account= accountService.obtain(id);
+       Account account= accountService.getById(id);
         return ResponseEntity.ok(account);
     }
     @PutMapping("/{id}")

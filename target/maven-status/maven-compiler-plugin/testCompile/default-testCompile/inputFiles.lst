@@ -1,1 +1,7 @@
-C:\Users\Lourdes\Documents\AidenBank\src\test\java\com\aiden\bank\DemoApplicationTests.java
+C:\Users\Lourdes\Documents\AidenBank\src\test\java\com\aiden\bank\AidenBankApplicationTests.java
+C:\Users\Lourdes\Documents\AidenBank\src\test\java\com\aiden\bank\integration\TransferIntegrationTest.java
+C:\Users\Lourdes\Documents\AidenBank\src\test\java\com\aiden\bank\unit\CustomerServiceTest.java
+C:\Users\Lourdes\Documents\AidenBank\src\test\java\com\aiden\bank\integration\CustomerIntegrationTest.java
+C:\Users\Lourdes\Documents\AidenBank\src\test\java\com\aiden\bank\unit\AccountServiceTest.java
+C:\Users\Lourdes\Documents\AidenBank\src\test\java\com\aiden\bank\unit\TransferServiceTest.java
+C:\Users\Lourdes\Documents\AidenBank\src\test\java\com\aiden\bank\integration\AccountIntegrationTest.java

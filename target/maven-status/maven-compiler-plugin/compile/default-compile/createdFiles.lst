@@ -5,6 +5,7 @@ com\aiden\bank\repository\IAccountRepository.class
 com\aiden\bank\model\Transfer.class
 com\aiden\bank\controller\TransferController.class
 com\aiden\bank\repository\ITransferRepository.class
+com\aiden\bank\config\EndpointLogger.class
 com\aiden\bank\service\CustomerService.class
 com\aiden\bank\exception\ApiException.class
 com\aiden\bank\repository\ICustomerRepository.class

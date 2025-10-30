@@ -17,7 +17,7 @@ public class AccountService {
         return accountRepository.save(account);
     }
 
-    public Account obtain(Long id) {
+    public Account getById(Long id) {
         return accountRepository.findById(id)
                 .orElseThrow(() -> new ApiException(
                         "ACCOUNT_NOT_FOUND",
@@ -27,7 +27,7 @@ public class AccountService {
     }
 
     public Account update(Long id, Account account){
-        Account accountToUpdate= obtain(id);
+        Account accountToUpdate= getById(id);
         accountToUpdate.setAccountNumber(account.getAccountNumber());
         return accountRepository.save(accountToUpdate);
     }
