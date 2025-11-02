@@ -1,6 +1,7 @@
 package com.aiden.bank.controller;
 import com.aiden.bank.model.Account;
 import com.aiden.bank.service.AccountService;
+import io.swagger.v3.oas.annotations.Operation;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -18,17 +19,22 @@ public class AccountController {
         this.accountService = accountService;
     }
 
+    @Operation(summary = "Crear cuenta")
     @PostMapping
     public ResponseEntity<Account> create(
             @RequestBody @Valid Account account) {
         return ResponseEntity.status(HttpStatus.CREATED).body(accountService.create(account));
     }
+
+    @Operation(summary = "Obtener cuenta por ID")
     @GetMapping("/{id}")
     public ResponseEntity<Account> obtain(
             @PathVariable(name="id") Long id){
        Account account= accountService.getById(id);
         return ResponseEntity.ok(account);
     }
+
+    @Operation(summary = "Actualizar cuenta por ID")
     @PutMapping("/{id}")
     public ResponseEntity<Account> update(
             @PathVariable(name="id")Long id,
@@ -36,6 +42,7 @@ public class AccountController {
         return ResponseEntity.ok(account);
     }
 
+    @Operation(summary = "Eliminar cuenta por ID")
     @DeleteMapping("/{id}")
     public ResponseEntity<Void>delete(
             @PathVariable(name="id")Long id){
