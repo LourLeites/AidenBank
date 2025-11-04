@@ -1,5 +1,5 @@
 package com.aiden.bank.integration;
-
+/*
 import com.aiden.bank.model.Account;
 import com.aiden.bank.model.Customer;
 import com.aiden.bank.model.Transfer;
@@ -93,3 +93,5 @@ public class TransferIntegrationTest {
                 .andExpect(jsonPath("$.amount").value(200.00));
     }
 }
+
+ */

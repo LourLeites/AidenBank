@@ -2,4 +2,3 @@ com\aiden\bank\unit\TransferServiceTest.class
 com\aiden\bank\unit\CustomerServiceTest.class
 com\aiden\bank\unit\AccountServiceTest.class
 com\aiden\bank\AidenBankApplicationTests.class
-com\aiden\bank\integration\TransferIntegrationTest.class
